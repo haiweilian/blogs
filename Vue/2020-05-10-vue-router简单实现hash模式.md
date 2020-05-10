@@ -113,7 +113,6 @@ VueRouter.install = function (_Vue) {
 ```js
 VueRouter.install = function (_Vue) {
   // 注册 router-view 组件，匹配对应 path 路径的 component 组件。
-  // vue-loader 已经把单文件(.vue)组件解析成了虚拟dom, 可以直接使用 render() 渲染。
   Vue.component('router-view', {
     render (h) {
       let component = null
