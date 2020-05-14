@@ -5,7 +5,7 @@ updated: 2020-05-04
 categories: PlugIn
 ---
 
-上次封装了[axios基础结构型封装](https://github.com/haiweilian/blog/blob/master/PlugIn/2019-11-01-axios%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E5%9E%8B%E5%B0%81%E8%A3%85.md)。
+上次封装了[axios基础结构型封装](./axios基础结构型封装.md)。
 基于这个结构扩展”全局的请求Loading“模块。使用 `axios` 的拦截功能实现。
 
 ## 查看示例

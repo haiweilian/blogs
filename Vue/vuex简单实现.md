@@ -7,7 +7,7 @@ categories: Vue
 
 简单实现，实现最基础的功能。先来一张官网图加深下印象。
 
-![](../Images/2020-05-08-vuex简单实现/vuex.png)
+![](../Images/vuex简单实现/vuex.png)
 
 ## 初始化项目
 
