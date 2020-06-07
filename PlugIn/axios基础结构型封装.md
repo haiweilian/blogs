@@ -9,7 +9,7 @@ categories: PlugIn
 
 ## 查看示例
 
-[查看示例](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/PlugIn/axios-global-config)
 
 ## 目录结构
 

@@ -7,6 +7,10 @@ categories: Vue
 
 简单实现，实现最基础的功能。
 
+## 查看示例
+
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-router-hash-simple-imp)
+
 ## 初始化项目
 
 先用 vue-cli 初始一个 vue 项目，router 模式要选择 `hash` 模式。
@@ -127,8 +131,3 @@ VueRouter.install = function (_Vue) {
   })
 }
 ```
-
-## 结语
-
-快动手试试吧 [查看示例](https://github.com/haiweilian/laboratory/tree/Vue@vue-router-hash-simple-implementation)
-

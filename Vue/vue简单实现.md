@@ -9,11 +9,11 @@ categories: Vue
 
 虽然没有涉及到 vue 的新加的概念和虚拟 dom ，但可以理解 vue 的基础的实现原理。
 
+## 查看示例
+
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-simple-imp)
+
 ## 起手示例
-
-完整示例。
-
-[vue简单实现](https://github.com/haiweilian/laboratory/tree/Vue%40vue-simple-implementation)
 
 先写一个小例子跑下效果。测试自己写的时候，更改下引用地址，引入自己写的就行了。
 

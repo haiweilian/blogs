@@ -9,6 +9,10 @@ categories: Vue
 
 ![](../Images/Vue/vuex-01.png)
 
+## 查看示例
+
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vuex-simple-imp)
+
 ## 初始化项目
 
 先用 vue-cli 初始一个 vue 项目，简单的编写一下 vuex 的代码，使它能够正常的运行起来。
@@ -231,8 +235,3 @@ class Store {
   }
 }
 ```
-
-## 结语
-
-快动手试试吧[查看示例](https://github.com/haiweilian/laboratory/tree/Vue@vuex-simple-implementation)
-

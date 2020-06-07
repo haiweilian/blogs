@@ -9,6 +9,10 @@ categories: Vue
 
 实现方式与 hash 模式基本一致，只不过 history 模式使用 history 的 api 实现跳转。
 
+## 查看示例
+
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-router-history-simple-imp)
+
 ## 更改监听方式
 
 监听 popstate 事件，需要注意的是只有当操作前进、后退的时候才会触发。
@@ -66,8 +70,3 @@ Vue.component('router-link', {
   }
 })
 ```
-
-## 结语
-
-快动手试试吧 [查看示例](https://github.com/haiweilian/laboratory/tree/Vue@vue-router-history-simple-implementation)
-
