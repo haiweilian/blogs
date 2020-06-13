@@ -17,6 +17,8 @@ categories: Vue
 
 ## 核心实现
 
+### 需求分析
+
 分析下需要实现的功能。
 
 - 实现一个插件：创建 `VueRouter` 类并把 `$router` 挂载到Vue原型上。
