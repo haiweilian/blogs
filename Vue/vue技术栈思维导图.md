@@ -1,0 +1,46 @@
+---
+title: vue技术栈思维导图
+date: 2020-06-15
+updated: 2020-06-15
+categories: Vue
+---
+
+## 思维导图
+
+### 项目目录
+
+![1.项目目录](../Map/Vue/1.项目目录.png)
+
+### 初始化流程
+
+![2.初始化流程](../Map/Vue/2.初始化流程.png)
+
+### 数据响应式
+
+![3.数据响应式](../Map/Vue/3.数据响应式.png)
+
+### 异步更新
+
+![4.异步更新](../Map/Vue/4.异步更新.png)
+
+### 虚拟DOM
+
+![5.虚拟DOM](../Map/Vue/5.虚拟DOM.png)
+
+### 组件化
+
+![6.组件化](../Map/Vue/6.组件化.png)
+
+### 编译
+
+![7.编译](../Map/Vue/7.编译.png)
+
+## 流程图
+
+### 生命周期
+
+![lifecycle](../Map/Vue/lifecycle.png)
+
+### 响应式依赖
+
+![reactive](../Map/Vue/reactive.png)

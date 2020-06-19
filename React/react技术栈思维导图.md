@@ -1,0 +1,28 @@
+---
+title: react技术栈思维导图
+date: 2020-06-15
+updated: 2020-06-15
+categories: React
+---
+
+## 思维导图
+
+### 项目目录
+
+![1.项目目录](../Map/React/1.项目目录.png)
+
+## 流程图
+
+### 生命周期
+
+![生命周期](../Map/React/lifecycle.png)
+
+## 相关技术
+
+### redux数据流
+
+![redux数据流](../Map/React/redux数据流.png)
+
+### dva数据流
+
+![dva数据流](../Map/React/dva数据流.png)
