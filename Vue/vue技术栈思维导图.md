@@ -44,3 +44,13 @@ categories: Vue
 ### 响应式依赖
 
 ![reactive](../Map/Vue/reactive.png)
+
+### diff过程
+
+![diff](../Map/Vue/diff.png)
+
+## 相关技术
+
+### vuex数据流
+
+![vuex](../Map/Vue/vuex.png)
