@@ -5,6 +5,7 @@
 ## Vue
 
 - [vue技术栈思维导图](./Vue/vue技术栈思维导图.md)
+- [vue面试题汇总](./Vue/vue面试题汇总.md)
 - [vue简单实现](./Vue/vue简单实现.md)
 - [vuex简单实现](./Vue/vuex简单实现.md)
 - [vue-router简单实现hash模式](./Vue/vue-router简单实现hash模式.md)
