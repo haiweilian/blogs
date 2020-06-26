@@ -32,5 +32,5 @@
 
 ## Server
 
-- [linux服务器环境配置记录](./Server/linux服务器环境配置记录)
+- [linux服务器环境配置记录](./Server/linux服务器环境配置记录.md)
 - [nginx使用和部署](./Server/nginx使用和部署.md)
