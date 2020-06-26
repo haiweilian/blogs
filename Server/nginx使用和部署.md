@@ -1,5 +1,5 @@
 ---
-title: 2020-01-22-nginx使用和部署
+title: nginx使用和部署
 date: 2020-01-22
 updated: 2020-01-22
 categories: Server
@@ -83,6 +83,8 @@ https证书各大云服务商都有免费申请的，相关教程可以看提供
 
 下面就直接放*代理静态*和*代理端口*两种代理的配置示例。**示例是我的真实域名，按照自己的修改即可**
 
+### 代理静态
+
 代理静态，在 `/etc/nginx/conf.d` 下新建 `www.haiweilian.com.conf`，写入以下内容。
 
 ```sh
@@ -132,8 +134,8 @@ server {
     root         /home/haiweilian.github.io;
 
     # https 证书相关
-    ssl_certificate "/etc/nginx/cert/www.haiweilian.com/www.haiweilian.com.pem";
-    ssl_certificate_key "/etc/nginx/cert/www.haiweilian.com/www.haiweilian.com.key";
+    ssl_certificate "/etc/nginx/cert/www.haiweilian.com.pem";
+    ssl_certificate_key "/etc/nginx/cert/www.haiweilian.com.key";
     ssl_session_timeout 5m;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -156,6 +158,8 @@ server {
     }
 }
 ```
+
+## 代理端口
 
 代理端口，在 `/etc/nginx/conf.d` 下新建 `api.haiweilian.com.conf`，写入以下内容。
 
@@ -204,8 +208,8 @@ server {
     # root         _;
 
     # https 证书相关
-    ssl_certificate "/etc/nginx/cert/api.haiweilian.com/api.haiweilian.com.pem";
-    ssl_certificate_key "/etc/nginx/cert/api.haiweilian.com/api.haiweilian.com.key";
+    ssl_certificate "/etc/nginx/cert/api.haiweilian.com.pem";
+    ssl_certificate_key "/etc/nginx/cert/api.haiweilian.com.key";
     ssl_session_timeout 5m;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
