@@ -56,3 +56,25 @@ categories: Server
 - [配置公网mongodb让其在外网能访问](https://www.jianshu.com/p/fc9cda52f49d)
 
 - [可视化管理工具Navicat](http://www.navicat.com.cn)、[mac破解版](https://xclient.info/s/navicat-premium.html)
+
+### mysql
+
+- [CentOS7安装最新版MySQL8.x](https://www.cnblogs.com/Twobox/p/9925460.html)
+
+- 对上面教程 **7、启动MySQL服务，并设置root密码** 的补充，上面的基本不好使：
+
+  1. 如果执行 `mysql -u root` 报错 `Access denied for user 'root'@'localhost' (using password: NO)` 则必须密码登录。通过 `mysql -u root -p` 命令输入密码，初始密码如下。
+
+  2. 初始密码是在安装的时候生成到 `/var/log/mysqld.log` log日志里面了，找到log文件搜索 `password` 关键字。
+  
+  3. 找到 `A temporary password is generated for root@localhost: Cw-5NpVv2cvk` 这行，其中 `Cw-5NpVv2cvk` 就是密码。登录成功后再继续修改密码。
+
+  4. 修改密码 `SET PASSWORD FOR root@localhost = '123456';`
+
+- [Linux下Mysql设置外网可以访问](https://blog.csdn.net/leon_jinhai_sun/article/details/89334175)
+
+### docker
+
+- [阿里云docker客户端镜像](http://mirrors.aliyun.com/docker-toolbox/)
+
+- [linux安装docker](https://www.cnblogs.com/kingsonfu/p/11576797.html)
