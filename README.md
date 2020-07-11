@@ -1,6 +1,7 @@
-# BLOG
+# 记录工作和学习中的经验
 
-~~ 少年易老学难成，一寸光阴不可轻。  ~~
+- [对应的实验](https://github.com/haiweilian/laboratory)
+- [gitee镜像仓库](https://gitee.com/haiweilian/blog)
 
 ## Vue
 
@@ -20,10 +21,6 @@
 
 - [Css命名规则BEM思想](./Css/Css命名规则BEM思想.md)
 - [ElementUI的Scss源码分析](./Css/ElementUI的Scss源码分析.md)
-
-## Html
-
-- [标签语义化](./Html/标签语义化.md)
 
 ## PlugIn
 
