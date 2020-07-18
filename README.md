@@ -21,6 +21,10 @@
 
 - [鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
+## JavaScript
+
+- [http协议&网络思维导图](./JavaScript/http协议&网络思维导图.md)
+
 ## Css
 
 - [Css命名规则BEM思想](./Css/Css命名规则BEM思想.md)
