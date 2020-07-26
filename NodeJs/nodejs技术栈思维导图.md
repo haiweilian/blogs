@@ -14,3 +14,7 @@ categories: NodeJs
 ### eggjs实践
 
 ![eggjs实践](../Map/NodeJs/eggjs实践.png)
+
+### 服务端微信公众号开发要点
+
+![服务端微信公众号开发要点](../Map/NodeJs/服务端微信公众号开发要点.png)
