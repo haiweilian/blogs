@@ -10,3 +10,7 @@ categories: JavaScript
 ### HTTP协议
 
 ![HTTP协议](../Map/JavaScript/Net/HTTP协议.png)
+
+### 文件上传逻辑
+
+![文件上传逻辑](../Map/JavaScript/Net/文件上传逻辑.png)

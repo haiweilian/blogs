@@ -20,6 +20,7 @@
 ## NodeJs
 
 - [鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
+- [nodejs技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
 
 ## JavaScript
 
