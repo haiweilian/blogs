@@ -1,5 +1,5 @@
 ---
-title: vue-router简单实现hash模式
+title: vue-router简单实现
 date: 2020-05-10
 updated: 2020-05-10
 categories: Vue
@@ -9,7 +9,7 @@ categories: Vue
 
 ## 查看示例
 
-[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-router-hash-simple-imp)
+[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-router-simple-imp)
 
 ## 初始化项目
 

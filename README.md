@@ -9,8 +9,7 @@
 - [vue面试题汇总](./Vue/vue面试题汇总.md)
 - [vue简单实现](./Vue/vue简单实现.md)
 - [vuex简单实现](./Vue/vuex简单实现.md)
-- [vue-router简单实现hash模式](./Vue/vue-router简单实现hash模式.md)
-- [vue-router简单实现history模式](./Vue/vue-router简单实现history模式.md)
+- [vue-router简单实现](./Vue/vue-router简单实现.md)
 
 ## React
 

@@ -67,7 +67,7 @@ categories: Vue
 
 ## 原理分析
 
-![原理分析](../Images/Vue/vue-01.png)
+![原理分析](../Map/Vue/reactive.png)
 
 - Vue: 框架构造函数。
 - Observer: 执行数据响应化。
@@ -115,8 +115,6 @@ function proxy(vm) {
 }
 ```
 
-![数据代理](../Images/Vue/vue-02.png)
-
 ## Observer数据响应化
 
 vue是利用 `Object.defineProperty` 做数据响应式。定义一个 `Observe` 类实现这个功能。
@@ -153,13 +151,9 @@ class Observe {
 }
 ```
 
-![响应式数据](../Images/Vue/vue-03.png)
-
 ## Compile编译模板
 
 编译模板需要做的就是，遍历视图模板的节点，解析其中的特殊模板语法，做不同的处理。
-
-![编译模板](../Images/Vue/vue-04.png)
 
 ### 文本节点
 
@@ -214,8 +208,6 @@ class Compile {
   }
 }
 ```
-
-![文本节点 && 包含插值语法](../Images/Vue/vue-05.gif)
 
 ### 编译指令
 
@@ -287,8 +279,6 @@ class Compile {
 }
 ```
 
-![文本节点 && 包含插值语法](../Images/Vue/vue-06.gif)
-
 ### 指令v-model
 
 ```js
@@ -353,13 +343,9 @@ eventHander(node, key, event) {
 
 ## Watcher、Dep依赖收集
 
-![依赖收集](../Images/Vue/vue-07.png)
-
 我们模板中的每一个绑定的 `data` 中的 `key` 都称为依赖。同一个 `key` 可能会出现多次，所以要为每个依赖创建一个 Watcher。这个过程称为依赖收集。
 
 ### 实现方式
-
-![原理分析](../Images/Vue/vue-01.png)
 
 - defineReactive 时为每一个 key 创建一个 Dep 实例。
 - 初始化模板视图时读取某个 key，例如 name1 ，创建一个 watcher1，触发 name1 的 getter 方法。
@@ -462,8 +448,4 @@ function defineReactive(obj, key, val) {
 
 关系有点绕，上图。
 
-![关系有点绕](../Images/Vue/vue-08.png)
-
-最终效果。
-
-![最终效果](../Images/Vue/vue-09.gif)
+![关系有点绕](../Images/Vue/vue简单实现-1.png)
