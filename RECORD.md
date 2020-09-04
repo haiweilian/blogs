@@ -12,6 +12,6 @@
 
 ## 大文件拉取
 
-- 仓库同步到gitee `https://gitee.com/haiweilian/blog`
-- 拉取gitee的仓库 `git clone https://gitee.com/haiweilian/blog`
+- 仓库同步到 gitee `https://gitee.com/haiweilian/blog`
+- 拉取 gitee 的仓库 `git clone https://gitee.com/haiweilian/blog`
 - 更改远程地址 `git remote set-url origin https://github.com/haiweilian/blog.git`
