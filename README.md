@@ -18,7 +18,7 @@
 ## NodeJs
 
 - [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
-- [鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
+- [nodejs 鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
 ## Css
 
