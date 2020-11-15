@@ -18,16 +18,17 @@
 ## NodeJs
 
 - [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
-- [nodejs 鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
+- [鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
 ## Css
 
 - [css 命名规则 BEM 思想](./Css/Css命名规则BEM思想.md)
-- [element 的 scss 源码分析](./Css/ElementUI的Scss源码分析.md)
+- [element-ui 的 scss 源码分析](./Css/ElementUI的Scss源码分析.md)
 
 ## Tools
 
 - [代码风格自动化](./Tools/代码风格自动化.md)
+- [gitlab 团队协作的基本使用](./Tools/gitlab团队协作的基本使用.md)
 
 ## PlugIn
 
