@@ -1,7 +1,17 @@
 # 记录工作和学习中的总结和经验
 
 - [对应的实验](https://github.com/haiweilian/laboratory)
-- [gitee 镜像仓库](https://gitee.com/haiweilian/blog)
+
+## JavaScript
+
+- [红宝书笔记系列之《第1章-什么是JavaScript》](./JavaScript/RedBook/第1章-什么是JavaScript.md)
+- [红宝书笔记系列之《第2章-HTML中的JavaScript》](./JavaScript/RedBook/第2章-HTML中的JavaScript.md)
+- [红宝书笔记系列之《第3章-语言基础》](./JavaScript/RedBook/第3章-语言基础.md)
+
+## NodeJs
+
+- [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
+- [nodejs 鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
 ## Vue
 
@@ -14,11 +24,6 @@
 
 - [react 技术栈思维导图](./React/react技术栈思维导图.md)
 - [redux 简单实现](./React/redux简单实现.md)
-
-## NodeJs
-
-- [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
-- [鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
 ## Css
 
