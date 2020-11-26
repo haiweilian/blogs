@@ -23,7 +23,7 @@ categories: Vue
 
 ![4.异步更新](../Map/Vue/4.异步更新.png)
 
-### 虚拟DOM
+### 虚拟 DOM
 
 ![5.虚拟DOM](../Map/Vue/5.虚拟DOM.png)
 
@@ -45,12 +45,12 @@ categories: Vue
 
 ![reactive](../Map/Vue/reactive.png)
 
-### diff过程
+### diff 过程
 
 ![diff](../Map/Vue/diff.png)
 
 ## 相关技术
 
-### vuex数据流
+### vuex 数据流
 
 ![vuex](../Map/Vue/vuex.png)

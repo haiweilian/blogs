@@ -21,7 +21,7 @@ sudo yum install nginx
 sudo apt install nginx
 ```
 
-安装完成之后执行 `sudo nginx` 启动。就可以通过服务器的 *公网ip* ，访问到 nginx 的默认页面。
+安装完成之后执行 `sudo nginx` 启动。就可以通过服务器的 _公网 ip_ ，访问到 nginx 的默认页面。
 
 ## 常用命令
 
@@ -77,9 +77,9 @@ include /etc/nginx/conf.d/*.conf;
 
 ## 部署&https
 
-https证书各大云服务商都有免费申请的，相关教程可以看提供的文档。
+https 证书各大云服务商都有免费申请的，相关教程可以看提供的文档。
 
-这里如阿里云[阿里云申请免费SSL证书](https://yq.aliyun.com/articles/637307) & [在Nginx/Tengine服务器上安装证书](https://help.aliyun.com/document_detail/98728.html)
+这里如阿里云[阿里云申请免费 SSL 证书](https://yq.aliyun.com/articles/637307) & [在 Nginx/Tengine 服务器上安装证书](https://help.aliyun.com/document_detail/98728.html)
 
 下面就直接放*代理静态*和*代理端口*两种代理的配置示例。**示例是我的真实域名，按照自己的修改即可**
 
@@ -241,4 +241,4 @@ server {
 
 ## 结束总结
 
-在搞懂nginx的目录和部署步骤之后遇到的错误和优化查资料就可以自己解决了。
+在搞懂 nginx 的目录和部署步骤之后遇到的错误和优化查资料就可以自己解决了。

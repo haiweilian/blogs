@@ -32,29 +32,29 @@ categories: PlugIn
 // http/http-base.js
 export default {
   development: {
-    1: 'https://api.github.com',
-    2: 'https://raw.githubusercontent.com',
-    3: 'https://development.rxjy.com'
+    1: "https://api.github.com",
+    2: "https://raw.githubusercontent.com",
+    3: "https://development.rxjy.com",
   },
   production: {
-    1: 'https://api.github.com',
-    2: 'https://raw.githubusercontent.com',
-    3: 'https://production.rxjy.com'
-  }
-}
+    1: "https://api.github.com",
+    2: "https://raw.githubusercontent.com",
+    3: "https://production.rxjy.com",
+  },
+};
 ```
 
-`development` 配置测试，`production` 配置正式。注意: 正式与测试key需对应。
+`development` 配置测试，`production` 配置正式。注意: 正式与测试 key 需对应。
 
-## axios封装
+## axios 封装
 
 一般封装我们常用 `get` `post` `put` `delete` 就足够了。这里新建一个 `http.js` 文件。
 
 ```javascript
 // http/http.js
-import axios from 'axios'
-import qs from 'qs'
-import base from './http-base'
+import axios from "axios";
+import qs from "qs";
+import base from "./http-base";
 
 /**
  * 扩展模块
@@ -63,89 +63,91 @@ import base from './http-base'
 /**
  * 定义请求统一导出。
  */
-const http = {}
+const http = {};
 
 /**
  * 配置默认项。
  */
-axios.defaults.timeout = 5000
-axios.defaults.withCredentials = false
+axios.defaults.timeout = 5000;
+axios.defaults.withCredentials = false;
 
 /**
  * 请求拦截，如果您想在请求前做些事情。
  */
-axios.interceptors.request.use((config) => {
-  return config
-}, (error) => {
-  return Promise.reject(error)
-})
+axios.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 /**
  * 响应拦截，如果您想在请求后做些事情。
  */
-axios.interceptors.response.use((response) => {
-  return response
-}, (error) => {
-  return Promise.reject(error)
-})
+axios.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 /**
  * restful风格路径参数替换。
  * @example toRestful('/users/{name}', {name: 'haiweilian'}) => '/users/haiweilian'
  */
 const toRestful = (url, params) => {
-  const _params = url.match(/(?<=\{).*?(?=\})/gi) || []
-  _params.forEach(el => {
-    url = url.replace('{' + el + '}', params[el])
-    delete params[el]
-  })
-  return url
-}
+  const _params = url.match(/(?<=\{).*?(?=\})/gi) || [];
+  _params.forEach((el) => {
+    url = url.replace("{" + el + "}", params[el]);
+    delete params[el];
+  });
+  return url;
+};
 
 /**
  * 定义 Content-Type, 选择一个常用的作为默认。
  */
 const ContentType = {
-  json: 'application/json;charset=utf-8',
-  urlencoded: 'application/x-www-form-urlencoded;charset=utf-8'
-}
+  json: "application/json;charset=utf-8",
+  urlencoded: "application/x-www-form-urlencoded;charset=utf-8",
+};
 
 /**
  * 定义/处理请求。
  */
 const request = (options) => {
-  let {
-    method,
-    action,
-    params,
-    data,
-    type,
-    config
-  } = options
+  let { method, action, params, data, type, config } = options;
 
   /**
    * 合并初始配置, 自定义的判断。
    */
-  config = Object.assign({
-    loading: true,
-    contentType: 'urlencoded'
-  }, config)
+  config = Object.assign(
+    {
+      loading: true,
+      contentType: "urlencoded",
+    },
+    config
+  );
 
   /**
    * 判断环境变量，获取正式/测试并处理请求路径。
    */
-  if (process.env.NODE_ENV === 'development') {
-    action = toRestful(base.development[type] + action, params || data)
+  if (process.env.NODE_ENV === "development") {
+    action = toRestful(base.development[type] + action, params || data);
   } else {
-    action = toRestful(base.production[type] + action, params || data)
+    action = toRestful(base.production[type] + action, params || data);
   }
 
   /**
    * 设置 Content-Type 如果是 POST && urlencoded 需要序列化。
    */
-  axios.defaults.headers['Content-Type'] = ContentType[config.contentType]
-  if (method === 'post' && config.contentType === 'urlencoded') {
-    data = qs.stringify(data)
+  axios.defaults.headers["Content-Type"] = ContentType[config.contentType];
+  if (method === "post" && config.contentType === "urlencoded") {
+    data = qs.stringify(data);
   }
 
   /**
@@ -156,41 +158,36 @@ const request = (options) => {
     method: method,
     data: data,
     params: params,
-    ...config
-  })
-}
+    ...config,
+  });
+};
 
 /**
  * 定义请求方式。
  */
-['get', 'post', 'put', 'delete'].forEach(method => {
-  http[method] = (
-    action,
-    params,
-    type = 1,
-    config = {}
-  ) => {
-    if (method === 'get') {
+["get", "post", "put", "delete"].forEach((method) => {
+  http[method] = (action, params, type = 1, config = {}) => {
+    if (method === "get") {
       return request({
         method: method,
         action: action,
         params: params,
         type: type,
-        config: config
-      })
+        config: config,
+      });
     } else {
       return request({
         method: method,
         action: action,
         data: params,
         type: type,
-        config: config
-      })
+        config: config,
+      });
     }
-  }
-})
+  };
+});
 
-export default http
+export default http;
 ```
 
 `request` 函数主要处理一些基础配置，如处理错误等建议在拦截器处理。
@@ -201,34 +198,36 @@ export default http
 
 ```javascript
 // http/test/index.js
-import http from '../http'
+import http from "../http";
 
 /**
  * restful 测试
  */
-export function restfulTest (params) {
-  return http.get('/users/{name}', params, 1)
+export function restfulTest(params) {
+  return http.get("/users/{name}", params, 1);
 }
 
 /**
  * get 测试
  */
-export function getTest (params) {
-  return http.get('/bloc/template/listModifyTemplateArea', params, 3)
+export function getTest(params) {
+  return http.get("/bloc/template/listModifyTemplateArea", params, 3);
 }
 
 /**
  * post 测试
  */
-export function postTest (params) {
-  return http.post('/bloc/template/insertModifyTemplateArea', params, 3)
+export function postTest(params) {
+  return http.post("/bloc/template/insertModifyTemplateArea", params, 3);
 }
 
 /**
  * postJson 测试
  */
-export function postTestJSON (params) {
-  return http.post('/bloc/offer/updateT_Comp_FeeF_TAX', params, 3, {contentType: 'json'})
+export function postTestJSON(params) {
+  return http.post("/bloc/offer/updateT_Comp_FeeF_TAX", params, 3, {
+    contentType: "json",
+  });
 }
 ```
 
@@ -238,31 +237,31 @@ export function postTestJSON (params) {
 
 ```javascript
 // App.vue
-import { restfulTest, getTest, postTest, postTestJSON } from './http/test/index'
+import { restfulTest, getTest, postTest, postTestJSON } from "./http/test/index";
 
 restfulTest({
-  name: 'haiweilian'
-}).then(res => {
-  console.log('restfulTest', res)
-}).catch(() => {})
+  name: "haiweilian",
+}).then((res) => {
+  console.log("restfulTest", res);
+});
 
 getTest({
   cityId: 12,
-  type: 1
-}).then(res => {
-  console.log('getTest', res)
-}).catch(() => {})
+  type: 1,
+}).then((res) => {
+  console.log("getTest", res);
+});
 
 postTest({
-  json: JSON.stringify([{'templateType': 1, 'cityId': 12, 'title': '', 'abstractText': ''}])
-}).then(res => {
-  console.log('postTest', res)
-}).catch(() => {})
+  json: JSON.stringify([{ templateType: 1, cityId: 12, title: "", abstractText: "" }]),
+}).then((res) => {
+  console.log("postTest", res);
+});
 
 postTestJSON({
-  F_SOLUTION_KEY: '092349DC-68AF-41A3-9E43-5DB018845E19',
-  F_TAXRATE: '9'
-}).then(res => {
-  console.log('postTest', res)
-}).catch(() => {})
+  F_SOLUTION_KEY: "092349DC-68AF-41A3-9E43-5DB018845E19",
+  F_TAXRATE: "9",
+}).then((res) => {
+  console.log("postTest", res);
+});
 ```

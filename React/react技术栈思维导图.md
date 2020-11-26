@@ -19,10 +19,10 @@ categories: React
 
 ## 相关技术
 
-### redux数据流
+### redux 数据流
 
 ![redux数据流](../Map/React/redux数据流.png)
 
-### dva数据流
+### dva 数据流
 
 ![dva数据流](../Map/React/dva数据流.png)

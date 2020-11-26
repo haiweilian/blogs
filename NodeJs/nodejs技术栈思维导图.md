@@ -11,7 +11,7 @@ categories: NodeJs
 
 ![全栈部署的解决方案](../Map/NodeJs/全栈部署的解决方案.png)
 
-### eggjs实践
+### eggjs 实践
 
 ![eggjs实践](../Map/NodeJs/eggjs实践.png)
 

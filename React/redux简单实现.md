@@ -99,7 +99,7 @@ export default class ReduxPage extends Component {
 
 `combineReducers` 合并多个 `reducer`。
 
-### 实现createStore
+### 实现 createStore
 
 在执行 `createStore` 函数的时候，需要实现几个功能。
 
@@ -146,7 +146,7 @@ export default function createStore(reducer) {
 }
 ```
 
-### 实现combineReducers
+### 实现 combineReducers
 
 它的实现方式就是，把多个 `reducer` 一块执行，然后把结果存储到一个对象里，整体返回。那么我们的取值方式就变成了 `store.getState().xxx` 了。
 

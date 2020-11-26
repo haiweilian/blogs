@@ -5,11 +5,11 @@ updated: 2019-12-21
 categories: Css
 ---
 
-最近自己在写自己的博客页面，想着就参考框架的组织结构，自己是对element-ui是比较熟悉的，就拿来参考了。[element-ui](https://github.com/ElementUI/theme-chalk) 的样式是使用 scss预处理器，和 BEM思想写的。整体来说组织的还是挺好的，从中可以学到一些封装思想，可以提升一下自己。
+最近自己在写自己的博客页面，想着就参考框架的组织结构，自己是对 element-ui 是比较熟悉的，就拿来参考了。[element-ui](https://github.com/ElementUI/theme-chalk) 的样式是使用 scss 预处理器，和 BEM 思想写的。整体来说组织的还是挺好的，从中可以学到一些封装思想，可以提升一下自己。
 
 ## 目录结构
 
-你可以把[theme-chalk](https://github.com/ElementUI/theme-chalk)的源码下载下来，以便对比着看。下面是几个比较重要的文件(2019-12-21最新版本为v.2.13.0)。
+你可以把[theme-chalk](https://github.com/ElementUI/theme-chalk)的源码下载下来，以便对比着看。下面是几个比较重要的文件(2019-12-21 最新版本为 v.2.13.0)。
 
 ```sh
 ├── gulpfile.js // 打包配置，可以把代码压缩 cssmin() 注释掉，以便查看编译后的代码。
@@ -28,7 +28,7 @@ categories: Css
 └──
 ```
 
-## BEM支持
+## BEM 支持
 
 源码中最重要的一个概念 `BEM` ，贯穿全局。
 
@@ -39,36 +39,36 @@ categories: Css
 命名空间和块。框架都会选择一个相对应的前缀，避免样式冲突，如：`.el-input`。
 
 ```scss
-$namespace: 'el';
+$namespace: "el";
 ```
 
-元素。使用的 `__` 双下划线，如： `.el-input__inner`。
+元素。使用的 `__`  双下划线，如： `.el-input__inner`。
 
 ```scss
-$element-separator: '__';
+$element-separator: "__";
 ```
 
 修饰。使用的 `--` 双连字符，如：`.el-input--small`。
 
 ```scss
-$modifier-separator: '--';
+$modifier-separator: "--";
 ```
 
 状态。使用的 `is-` 作为前缀，如：`.el-input.is-disabled`。
 
 ```scss
-$state-prefix: 'is-';
+$state-prefix: "is-";
 ```
 
 ### BEM Mixin
 
 在 `src/mixins/mixins.scss` 定义了 `@mixin b($block)` 、`@mixin e($element)` 、 `@mixin m($modifier)` 、 `@mixin when($state)` 几个主要的 `mixin`。 用一个源码举例，`src/input.scss` 涉及到了所有的方法，也比较常用。
 
-mixin中涉及到的几个知识点：
+mixin 中涉及到的几个知识点：
 
 - [!global](https://sass-lang.com/documentation/variables#shadowing) 把局部变量设置成全局变量。
 
-- [@content](https://sass-lang.com/documentation/at-rules/mixin#content-blocks) 把@include mixin包含的内容块导入到此处。
+- [@content](https://sass-lang.com/documentation/at-rules/mixin#content-blocks) 把@include mixin 包含的内容块导入到此处。
 
 - [@at-root](https://sass-lang.com/documentation/at-rules/at-root) 忽略嵌套，从根层级书写。
 
@@ -104,7 +104,6 @@ mixin中涉及到的几个知识点：
     position: absolute;
   }
 }
-
 ```
 
 编译后。
@@ -176,7 +175,7 @@ mixin中涉及到的几个知识点：
 在 `bem` 的规范中，推荐的是选择器层级**尽量平级，减少嵌套** 所以也就是在上面的 mixin 中都使用了 `@at-root` 规则 。
 而实际中我们不可避免使用嵌套，在不同的场景下实现样式覆盖。如在不同大小，和不同状态我们是不是应该给下级设置不同的大小和颜色。
 
-function涉及到的几个知识点:
+function 涉及到的几个知识点:
 
 - [inspect](https://sass-lang.com/documentation/modules/meta#inspect) 返回字符串的表示形式。
 
@@ -256,7 +255,7 @@ function涉及到的几个知识点:
 
 ## 参考文献
 
-使用 `scss` 和 `bem` 可以很好的组织我们的css结构，推荐学习。源码中还有栅格布局`row.scss` 和 `col.scss` 文件写的也很简洁，我现在项目就是采用的这一套生成的。
+使用 `scss` 和 `bem` 可以很好的组织我们的 css 结构，推荐学习。源码中还有栅格布局`row.scss` 和 `col.scss` 文件写的也很简洁，我现在项目就是采用的这一套生成的。
 
 <https://sass-lang.com/documentation>
 

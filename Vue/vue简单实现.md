@@ -35,9 +35,8 @@ categories: Vue
         <button @dblclick="firstBlood">双击我双击我</button>
       </div>
       <div>
-        <input v-model="name" type="text"/>
-        1、<span>{{name}}</span>
-        2、<span>{{name}}</span>
+        <input v-model="name" type="text" />
+        1、<span>{{name}}</span> 2、<span>{{name}}</span>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
@@ -71,11 +70,11 @@ categories: Vue
 
 - Vue: 框架构造函数。
 - Observer: 执行数据响应化。
-- Compile: 编译模板，初始化视图，收集依赖(更新函数、watcher创建)。
-- Watcher: 执行更新函数更新dom(Dep执行watcher)。
-- Dep: 管理多个Watcher，批量更新。
+- Compile: 编译模板，初始化视图，收集依赖(更新函数、watcher 创建)。
+- Watcher: 执行更新函数更新 dom(Dep 执行 watcher)。
+- Dep: 管理多个 Watcher，批量更新。
 
-## Vue构造函数
+## Vue 构造函数
 
 初始化构造函数。
 
@@ -115,9 +114,9 @@ function proxy(vm) {
 }
 ```
 
-## Observer数据响应化
+## Observer 数据响应化
 
-vue是利用 `Object.defineProperty` 做数据响应式。定义一个 `Observe` 类实现这个功能。
+vue 是利用 `Object.defineProperty` 做数据响应式。定义一个 `Observe` 类实现这个功能。
 
 ```js
 function defineReactive(obj, key, val) {
@@ -140,10 +139,10 @@ function defineReactive(obj, key, val) {
 class Observe {
   constructor(obj) {
     if (typeof obj === "object") {
-      this.walk(obj)
+      this.walk(obj);
     }
   }
-  walk (obj) {
+  walk(obj) {
     Object.keys(obj).forEach((key) => {
       defineReactive(obj, key, obj[key]);
     });
@@ -151,7 +150,7 @@ class Observe {
 }
 ```
 
-## Compile编译模板
+## Compile 编译模板
 
 编译模板需要做的就是，遍历视图模板的节点，解析其中的特殊模板语法，做不同的处理。
 
@@ -279,7 +278,7 @@ class Compile {
 }
 ```
 
-### 指令v-model
+### 指令 v-model
 
 ```js
 // v-model
@@ -301,7 +300,7 @@ modelHander(node, key) {
 }
 ```
 
-### 指令v-html
+### 指令 v-html
 
 ```js
 // v-html
@@ -341,7 +340,7 @@ eventHander(node, key, event) {
 }
 ```
 
-## Watcher、Dep依赖收集
+## Watcher、Dep 依赖收集
 
 我们模板中的每一个绑定的 `data` 中的 `key` 都称为依赖。同一个 `key` 可能会出现多次，所以要为每个依赖创建一个 Watcher。这个过程称为依赖收集。
 
@@ -352,7 +351,7 @@ eventHander(node, key, event) {
 - 由于触发 name1 的 getter 方法，便将 watcher1 添加到 name1 对应的 Dep 中。
 - 当 name1 更新，setter 触发时，便可通过对应 Dep 通知其管理所有 Watcher 更新。
 
-### Watcher管理依赖
+### Watcher 管理依赖
 
 在 `Compile` 里面是不是有 `update` 函数更新模板的，所以我们在 `update` 的时候，把这个更新函数收集起来，在未来某个时候执行。
 
@@ -394,7 +393,7 @@ class Watcher {
 }
 ```
 
-### Dep管理Watcher
+### Dep 管理 Watcher
 
 创建 Dep 有两个作用，为对应的响应式的 key 收集 watcher 和 通知 watcher 更新模板。
 
@@ -417,7 +416,7 @@ class Dep {
 }
 ```
 
-创建 Dep实例。当 new Watcher() 触发 getter，把当前 watcher收集起来，当触发 setter 执行 watcher。
+创建 Dep 实例。当 new Watcher() 触发 getter，把当前 watcher 收集起来，当触发 setter 执行 watcher。
 
 ```js
 function defineReactive(obj, key, val) {
@@ -444,7 +443,7 @@ function defineReactive(obj, key, val) {
 }
 ```
 
-## Observer、Compile、Watcher、Dep关系
+## Observer、Compile、Watcher、Dep 关系
 
 关系有点绕，上图。
 

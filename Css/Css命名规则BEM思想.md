@@ -5,11 +5,11 @@ updated: 2019-11-16
 categories: Css
 ---
 
-[BEM](https://en.bem.info/methodology/quick-start/)是什么？BEM是一种CSS命名思想，用于组织HTML中选择器的结构，利于CSS代码的维护，使得代码结构更清晰。其背后的想法是将用户界面分为独立的块。即使使用复杂的UI，也使得结构变的清晰和简洁。
+[BEM](https://en.bem.info/methodology/quick-start/)是什么？BEM 是一种 CSS 命名思想，用于组织 HTML 中选择器的结构，利于 CSS 代码的维护，使得代码结构更清晰。其背后的想法是将用户界面分为独立的块。即使使用复杂的 UI，也使得结构变的清晰和简洁。
 
 ## 核心思想
 
-BEM的意思就是块（block）、元素（element）、修饰符（modifier)。依次举例。
+BEM 的意思就是块（block）、元素（element）、修饰符（modifier)。依次举例。
 
 ### 块（block）
 
@@ -25,7 +25,7 @@ BEM的意思就是块（block）、元素（element）、修饰符（modifier)�
 
 ```html
 <div class="header">
-    <div class="nav"></div>
+  <div class="nav"></div>
 </div>
 ```
 
@@ -37,10 +37,10 @@ BEM的意思就是块（block）、元素（element）、修饰符（modifier)�
 
 ```html
 <div class="header">
-    <ul class="nav">
-        <li class="nav__item"></li>
-        <li class="nav__item"></li>
-    </ul>
+  <ul class="nav">
+    <li class="nav__item"></li>
+    <li class="nav__item"></li>
+  </ul>
 </div>
 ```
 
@@ -52,83 +52,94 @@ BEM的意思就是块（block）、元素（element）、修饰符（modifier)�
 
 ```html
 <div class="header">
-    <ul class="nav nav--small">
-        <li class="nav__item nav__item--active"></li>
-        <li class="nav__item"></li>
-    </ul>
+  <ul class="nav nav--small">
+    <li class="nav__item nav__item--active"></li>
+    <li class="nav__item"></li>
+  </ul>
 </div>
 ```
 
-## BEM规范
+## BEM 规范
 
 ### 命名规范
 
-在BEM中每个E（元素）只能出现一次，不存在 `B__E__E`（元素的元素）。
+在 BEM 中每个 E（元素）只能出现一次，不存在 `B__E__E`（元素的元素）。
 
 ```css
-.nav__item {}
+.nav__item {
+}
 
 /* 不允许 */
-.nav__item__item {}
+.nav__item__item {
+}
 ```
 
 单词之间你可用 kebab-case（短横线命名）命名或 camelCased (驼峰式)。
 
 ```css
 /* camelCased */
-.elNav {}
+.elNav {
+}
 
 /* kebab-case */
-.el-nav {}
+.el-nav {
+}
 ```
 
 ### 选择器规范
 
-不允许使用id选择器。如果使用id选择器，就失去了复用的价值。
+不允许使用 id 选择器。如果使用 id 选择器，就失去了复用的价值。
 
 ```css
 /* 不允许使用id选择器作为css的样式名 */
-#nav {}
+#nav {
+}
 ```
 
 不允许使用元素选择器，必要时必须使用子选择器(基本没有规范会推荐使用的)。
 
 ```css
 /* 不能使用元素选择器 */
-.nav li {}
+.nav li {
+}
 
 /* 必要时必须使用子选择器 */
-.nav > li {}
+.nav > li {
+}
 ```
 
 选择器层级尽量平级。（名字以及够长，冲突的可能性不大。可以减少渲染时间）。
 
 ```css
 /* 尽量不要嵌套使用 */
-.nav {}
-.nav .nav__item {}
+.nav {
+}
+.nav .nav__item {
+}
 
 /* 应该尽量平级 */
-.nav {}
-.nav__item {}
+.nav {
+}
+.nav__item {
+}
 ```
 
 ## 使用预编译工具
 
-使用scss、less可以减少我们的前缀编写量。
+使用 scss、less 可以减少我们的前缀编写量。
 
 ```scss
 // index.scss
 .nav {
-    &__item {
-        display:inline-block;
-        &--active {
-            color: blue;
-        }
+  &__item {
+    display: inline-block;
+    &--active {
+      color: blue;
     }
-    &--small {
-        font-size:12px;
-    }
+  }
+  &--small {
+    font-size: 12px;
+  }
 }
 ```
 
@@ -136,34 +147,34 @@ BEM的意思就是块（block）、元素（element）、修饰符（modifier)�
 
 ```css
 .nav {
-    display: flex;
+  display: flex;
 }
 .nav--small {
-    font-size: 12px;
+  font-size: 12px;
 }
 .nav__item {
-    display: inline-block;
+  display: inline-block;
 }
 .nav__item--active {
-    color: blue;
+  color: blue;
 }
 ```
 
-## BEM变体，其他命名方案
+## BEM 变体，其他命名方案
 
-BEM重要的是思想，具体使用哪种连字符有多种方案。[官方也采用了社区的命名方案](https://en.bem.info/methodology/naming-convention/#alternative-naming-schemes)。不管哪种风格根据自己的团队或喜好选择一种风格。
+BEM 重要的是思想，具体使用哪种连字符有多种方案。[官方也采用了社区的命名方案](https://en.bem.info/methodology/naming-convention/#alternative-naming-schemes)。不管哪种风格根据自己的团队或喜好选择一种风格。
 
 ## 实践理论
 
-- BEM块的划分，与层级无关。
+- BEM 块的划分，与层级无关。
 
-- BEM最难的部分之一是明确作用域是从哪开始和到哪结束的，以及什么时候使用（不使用）它。
+- BEM 最难的部分之一是明确作用域是从哪开始和到哪结束的，以及什么时候使用（不使用）它。
 
-## 如何看待BEM
+## 如何看待 BEM
 
-每一种解决方案总会有人反对和支持或许它适用于某些场景，[如何看待 CSS 中 BEM 的命名方式？](https://www.zhihu.com/question/2193515)，就像文中说的“取其精华去其糟粕，BEM的规范不一定是最佳实践，如果真的毫无价值,是会马上被历史所淹没的”。
+每一种解决方案总会有人反对和支持或许它适用于某些场景，[如何看待 CSS 中 BEM 的命名方式？](https://www.zhihu.com/question/2193515)，就像文中说的“取其精华去其糟粕，BEM 的规范不一定是最佳实践，如果真的毫无价值,是会马上被历史所淹没的”。
 
-而近年来的基于Vue、React的前端ui框架，也有使用BEM命名，您可以到官网审查元素查看Html源代码。[element-ui](https://element.eleme.cn/#/zh-CN/component/installation)、[vant](https://youzan.github.io/vant/#/zh-CN/intro) ...
+而近年来的基于 Vue、React 的前端 ui 框架，也有使用 BEM 命名，您可以到官网审查元素查看 Html 源代码。[element-ui](https://element.eleme.cn/#/zh-CN/component/installation)、[vant](https://youzan.github.io/vant/#/zh-CN/intro) ...
 
 ## 参考资料
 
