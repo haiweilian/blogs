@@ -7,7 +7,6 @@
 - [红宝书笔记系列之《第 1 章-什么是 JavaScript》](./JavaScript/RedBook/第1章-什么是JavaScript.md)
 - [红宝书笔记系列之《第 2 章-HTML 中的 JavaScript》](./JavaScript/RedBook/第2章-HTML中的JavaScript.md)
 - [红宝书笔记系列之《第 3 章-语言基础》](./JavaScript/RedBook/第3章-语言基础.md)
-
 - [红宝书笔记系列之《第 5 章-基本引用类型》](./JavaScript/RedBook/第5章-基本引用类型.md)
 - [红宝书笔记系列之《第 6 章-集合引用类型》](./JavaScript/RedBook/第6章-集合引用类型.md)
 - [红宝书笔记系列之《第 10 章-函数》](./JavaScript/RedBook/第10章-函数.md)
