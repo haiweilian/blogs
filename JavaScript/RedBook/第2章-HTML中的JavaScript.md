@@ -1,5 +1,5 @@
 ---
-title: 红宝书笔记系列之《第2章-HTML中的JavaScript》
+title: 红宝书笔记系列之《第 2 章-HTML 中的 JavaScript》
 date: 2020-11-20
 updated: 2020-11-20
 categories: JavaScript
@@ -14,8 +14,6 @@ categories: JavaScript
 - `defer` 表示文档解析和显示完成后再执行脚本（相当于把执行放到了最底部），只对外部文件有效。
 
 - 默认会按照 `<script>` 在页面中出现的顺序依次解析它们，前提是没有使用 `async` 和 `defer` 属性。
-
-[在以下三个脚本分别输出内容，观察顺序。](https://github.com/haiweilian/laboratory/tree/master/JavaScript/red-book/%E7%AC%AC2%E7%AB%A0-HTML%E4%B8%AD%E7%9A%84JavaScript/async%E5%92%8Cdefer)
 
 以下可以看出：加载顺序是固定的。
 
@@ -51,7 +49,7 @@ categories: JavaScript
 
 ## noscript 元素
 
- 当 **浏览器不支持脚本** 和 **浏览器对脚本的支持被关闭** 的情况将会显示标签内的内容。
+当 **浏览器不支持脚本** 和 **浏览器对脚本的支持被关闭** 的情况将会显示标签内的内容。
 
 ```html
 <noscript>

@@ -1,5 +1,5 @@
 ---
-title: 红宝书笔记系列之《第1章-什么是JavaScript》
+title: 红宝书笔记系列之《第 1 章-什么是 JavaScript》
 date: 2020-11-20
 updated: 2020-11-20
 categories: JavaScript
