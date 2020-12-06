@@ -5,7 +5,7 @@ updated: 2020-11-29
 categories: JavaScript
 ---
 
-## classList 属性。
+## classList 属性
 
 HTML5 给所有元素增加 classList 属性为操作类型提供了更简单的放大。
 

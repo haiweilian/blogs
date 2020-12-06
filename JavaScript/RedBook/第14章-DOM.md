@@ -5,7 +5,7 @@ updated: 2020-11-29
 categories: JavaScript
 ---
 
-## 文档信息，
+## 文档信息
 
 cdcdacd 吃的
 当页面包含来自某个不同子域的窗口（iframe）时，设置 document.domain 是有用的。
