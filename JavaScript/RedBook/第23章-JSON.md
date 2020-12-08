@@ -1,172 +1,50 @@
 ---
-title: Json 相关知识
-date: 2019-08-25
-updated: 2019-08-25
+title: 红宝书笔记系列之《第 23 章-JSON》
+date: 2020-12-06
+updated: 2020-12-06
 categories: JavaScript
 ---
 
-## JSON 格式
-
-JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
-
-> JSON 是一种语法，用来序列化对象、数组、数值、字符串、布尔值 和 null 。它基于 JavaScript 语法，但与之不同：JavaScript 不是 JSON，JSON 也不是 JavaScript。
-
-JSON 建构于两种结构：
-
-无序的 `{"key":"value"}` 键值对集合。`key` 必须是 "双引号"，如果值是字符串也必须是 "双引号"。
-
-```javascript
-let jsonObject = {
-  name: "lian",
-  age: 22,
-  status: true,
-  list: ["play", "status"],
-};
-```
-
-有序列表 `["lian"]` 项集合。如果项是字符串必须是 "双引号"。
-
-```javascript
-let jsonArray = ["play", "status"];
-```
-
 ## 序列化
 
-我们可以使用 `JSON.stringify(value[, replacer [, space]])` 把普通的对象转化为 `json` 字符串。
+利用第二参数，对象的每个键值对都会被函数先处理。
 
-定义一个对象，用作下面的示例。
+```js
+let s = { name: "lian", age: 22, status: true };
+let s1 = JSON.stringify(s, (key, value) => {
+  if (typeof value === "string") {
+    return value.toUpperCase();
+  }
+  return value;
+});
+console.log(s1); // {"name":"LIAN","age":22,"status":true}
+```
 
-```javascript
-let jsonObject = {
+有时候，在对象需要上自定义 JSON 序列化，可以在序列化的对象中添加 `toJSON()` 方法。
+
+```js
+let sto = {
   name: "lian",
   age: 22,
   status: true,
-  list: ["play", "status"],
+  toJSON() {
+    return this.age * 2;
+  },
 };
+console.log(JSON.stringify(sto)); // 44
 ```
 
-第一个必传参数，序列的值。
+## 解析
+
+利用第二参数，对象的每个键值对都会被函数先处理。
 
 ```javascript
-JSON.stringify(jsonObject);
-```
-
-```json
-{ "name": "lian", "age": 22, "status": true, "list": ["play", "status"] }
-```
-
-第二个可选参数，可以传入一个函数，这样对象的每个键值对都会被函数先处理。
-
-```javascript
-JSON.stringify(jsonObject, (key, value) => {
+let sp = '{"name":"lian","age":22,"status":true}';
+sp1 = JSON.parse(sp, function (key, value) {
   if (typeof value === "string") {
     return value.toUpperCase();
   }
   return value;
 });
+console.log(sp1); // { name: 'LIAN', age: 22, status: true }
 ```
-
-```json
-{ "name": "LIAN", "age": 22, "status": true, "list": ["PLAY", "STATUS"] }
-```
-
-第三个可选参数，缩进用的空白字符串，格式化输出的字符串。
-
-```javascript
-JSON.stringify(jsonObject, null, "  ");
-```
-
-```json
-{
-  "name": "lian",
-  "age": 22,
-  "status": true,
-  "list": ["play", "status"]
-}
-```
-
-## 反序列化
-
-拿到一个 JSON 格式的字符串，我们直接用 `JSON.parse(text[, reviver])` 把它变成一个 JavaScript 对象。
-
-定义一个 json 字符串，用作下面的示例。
-
-```javascript
-let jsonString = '{"name":"lian","age":22,"status":true}';
-```
-
-第一必传参数，用来转换解析 json 字符串。
-
-```javascript
-JSON.parse(jsonString);
-```
-
-```javascript
-{
-    age: 22,
-    name: "lian",
-    status: true
-}
-```
-
-第二个可选参数，可以传入一个函数，这样对象的每个键值对都会被函数先处理。
-
-```javascript
-JSON.parse(jsonString, function (key, value) {
-  if (typeof value === "string") {
-    return value.toUpperCase();
-  }
-  return value;
-});
-```
-
-```javascript
-{
-    age: 22,
-    name: "LIAN",
-    status: true
-}
-```
-
-## 深拷贝
-
-可以使用 `JSON.parse(JSON.stringify(value))` 进行深拷贝。不过不在 json 语法之内的类型，会出现问题。
-
-- 函数、undefined 丢失。
-- date 类型转换为时间字符串。
-- 正则转化成了一个空对象。
-- NaN、Infinity、-Infinity 会转成 null。
-
-```javascript
-let deepclone = {
-    Infinity: Infinity,
-    NaN: NaN,
-    array: [1],
-    boolean: true,
-    date: new Date(),
-    obj: {a: 1},
-    reg: /123/,
-    sex: 1,
-    callback: () => {},
-    undefined: undefined
-}
-
-JSON.parse(JSON.stringify(deepclone))
-
-{
-    Infinity: null,
-    NaN: null,
-    array: [1],
-    boolean: true,
-    date: "2019-09-02T12:46:16.355Z",
-    obj: {a: 1},
-    reg: {},
-    sex: 1
-}
-```
-
-### toJSON
-
-有时候，在对象需要在 Json.stringfly()上自定义 JSON 序列化，
-
-> ps 这里参加 taggd-manger 里的代码。
