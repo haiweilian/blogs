@@ -5,76 +5,81 @@ updated: 2020-11-29
 categories: JavaScript
 ---
 
-## classList 属性
+## classList
 
-HTML5 给所有元素增加 classList 属性为操作类型提供了更简单的放大。
+HTML5 给所有元素增加 `classList` 属性为操作类型提供了更简单的方法。
 
-add(value)，向类名列表中添加指定的字符串值，如果这个值已经存在，则什么都不做。
-contains(value)，返回布尔值，表示给定的字符串是否存在。
-remove(value)，从列表中删除指定的字符串值。
-toggle(value)，如果类名列表中已经存在指定的 value，则删除。如果不存在，则删除。
+- add：向类名列表中添加指定的字符串值，如果这个值已经存在，则什么都不做。
+- contains：返回布尔值，表示给定的字符串是否存在。
+- remove：从列表中删除指定的字符串值。
+- toggle：如果类名列表中已经存在指定的 value 则删除。如果不存在，则添加。
 
-```js
-div.classList.add("disabled");
+```html
+<div id="box"></div>
+<script>
+  box.classList.add("disabled");
+  console.log(box.classList.contains("disabled")); // true
+  box.classList.remove("disabled");
+  console.log(box.classList.contains("disabled")); // false
+</script>
 ```
 
-## readyState 属性。
+## insertAdjacentHTML
 
-loading 表示文档正在加载.。
-complete 表示文档加载完成。
+插入标签，可以是字符串会自动解析成 html。
 
-判断文档是否加载完毕，在不支持之前，会通过 onload 事件处理程序完成后设置一个标识。
+- beforebegin：插入当前元素的前面，作为前一个同胞节点。
+- afterbegin：插入当前元素内部，作为新的子节点或放在第一个子节点前面。
+- beforeend：插入当前元素内部，作为新的子节点或放在最后一个子节点前面。
+- afterend：插入当前元素的后面，作为下一个同胞节点。
 
-```js
-var readyState = "loading";
-window.onload = function () {
-  readyState = "complete";
-};
+```html
+<ul id="ul">
+  <li id="li"></li>
+</ul>
+<script>
+  li.insertAdjacentHTML("beforebegin", "<li>插入当前元素的前面，作为前一个同胞节点。</li>");
+  console.log(ul.innerHTML); // <li>插入当前元素的前面，作为前一个同胞节点。</li> <li id="li"></li>
+</script>
 ```
 
-现在可以直接判断
+## insertAdjacentText
 
-```js
-if (document.readyState === "complete") {
-  // 加载完成
-}
+`insertAdjacentText` 与 `insertAdjacentHTML` 有相同的配置。
+
+```html
+<div id="text">insertAdjacentText</div>
+<script>
+  text.insertAdjacentText("afterbegin", "插入当前文本的前面。");
+  console.log(text.innerHTML); // 插入当前文本的前面。insertAdjacentText
+</script>
 ```
 
-## insertAdjacentHTML 和 insertAdjacentText
+## scrollIntoView
 
-插入标签，可以是字符串会自动解析成 html
+`scrollIntoView` 存在于所有的元素上，可以滚动浏览器窗口，或容器。使元素进入视口。
 
-beforebegin 插入当前元素的前面，作为前一个同胞节点。
-afterbegin，插入当前元素内部，作为新的子节点或放在第一个子节点前面。
-beforeend，插入当前元素内部，作为新的子节点或放在最后一个子节点前面。
-afterend，插入当前元素的后面，作为下一个同胞节点。
+- behavior：定义过渡动画，可选 "smooth" / "auto" 。
+- block：定义垂直方向的对齐，可选 "start" / "center" / "end" / "nearest" 。
+- inline：定义水平方向的对齐，可选 "start" / "center" / "end" / "nearest" 。
 
-```js
-element.insertAdjacentHTML("beforebegin", "<div></div>");
-element.insertAdjacentText("beforebegin", "f0hf9urhfuru");
-```
+```html
+<div style="height: 2000px">
+  <button id="button" style="margin-top: 1000px">出现在可视区域</button>
+</div>
+<script>
+  // 窗口滚动后元素的顶部与视口顶部对齐
+  button.scrollIntoView(true);
+  button.scrollIntoView({ block: "start" });
 
-## scrollIntoView()
+  // 窗口滚动后元素的底部部与视口底部对齐
+  button.scrollIntoView(false);
+  button.scrollIntoView({ block: "end" });
 
-> ps： 使用场景.
-> scrollIntoView() 存在于所有的元素上，可以滚动浏览器窗口。或容器元素，一遍进入视口。
-
-滚动元素平滑地进入视口中心位置。（更多选项可查询 mdn）
-
-```js
-
-// 窗口滚动后元素的顶部与视口顶部对齐
-docuemnt.dic.scrollIntoView(true)
-docuemnt.dic.scrollIntoView({block: 'start'})
-
-// 窗口滚动后元素的底部部与视口底部对齐
-docuemnt.dic.scrollIntoView(false)
-docuemnt.dic.scrollIntoView({block: 'end'})
-
-docuemnt.dic.scrollIntoView({
-  behavior: 'smooth',
-  block: 'center', // start / center / end / nearest
-  inline: 'center' // 同上
-})
-···
+  button.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
+</script>
 ```
