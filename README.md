@@ -6,17 +6,17 @@
 
 - [红宝书之初读笔记系列](./JavaScript/RedBook/第0章-红宝书之初读笔记系列.md)
 
-## NodeJs
-
-- [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
-- [nodejs 鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
-
 ## Vue
 
 - [vue 技术栈思维导图](./Vue/vue技术栈思维导图.md)
 - [vue 简单实现](./Vue/vue简单实现.md)
 - [vuex 简单实现](./Vue/vuex简单实现.md)
 - [vue-router 简单实现](./Vue/vue-router简单实现.md)
+
+## NodeJs
+
+- [nodejs 技术栈思维导图](./NodeJs/nodejs技术栈思维导图.md)
+- [nodejs 鉴权方式汇总流程图](./NodeJs/鉴权方式汇总流程图.md)
 
 ## React
 
@@ -41,3 +41,7 @@
 ## Server
 
 - [nginx 使用和部署](./Server/nginx使用和部署.md)
+
+## Other
+
+- [Mr.Lian 的二零二零年度总结](./Other/Mr.Lian的二零二零年度总结.md)
