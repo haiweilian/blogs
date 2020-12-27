@@ -44,4 +44,4 @@
 
 ## Other
 
-- [Mr.Lian 的二零二零年度总结](./Other/Mr.Lian的二零二零年度总结.md)
+- [Lian 的二零二零年度总结](./Other/Lian的二零二零年度总结.md)
