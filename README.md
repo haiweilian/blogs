@@ -1,10 +1,11 @@
-# 记录工作和学习中的总结和经验
+# Blog
 
 - [对应的实验](https://github.com/haiweilian/laboratory)
 
 ## JavaScript
 
-- [红宝书之初读笔记系列](./JavaScript/RedBook/第0章-红宝书之初读笔记系列.md)
+- [《红宝书之初读笔记系列》](./JavaScript/RedBook/第0章-红宝书之初读笔记系列.md)
+- [《JavaScript 设计模式与开发实践》](./JavaScript/DesignPattern/README.md)
 
 ## Vue
 
