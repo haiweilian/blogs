@@ -2,7 +2,7 @@
 
 - [对应的实验](https://github.com/haiweilian/laboratory)
 
-## JavaScript
+## JScript
 
 - [《红宝书之初读笔记系列》](./JavaScript/RedBook/第0章-红宝书之初读笔记系列.md)
 - [《JavaScript 设计模式与开发实践》](./JavaScript/DesignPattern/README.md)
