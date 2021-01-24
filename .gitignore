@@ -22,3 +22,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Build
+dist

@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "- [对应的实验](https://github.com/haiweilian/laboratory)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiweilian/blog.git"
+  },
+  "author": "haiweilian@foxmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haiweilian/blog/issues"
+  },
+  "homepage": "https://github.com/haiweilian/blog#readme",
+  "devDependencies": {
+    "vuepress": "^1.8.0"
+  }
+}
