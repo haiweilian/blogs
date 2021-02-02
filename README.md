@@ -1,6 +1,7 @@
 # Blog
 
 - [对应的实验](https://github.com/haiweilian/laboratory)
+- [码云的镜像](https://gitee.com/haiweilian/blog)
 
 ## JScript
 
@@ -11,9 +12,9 @@
 ## Vue
 
 - [vue 技术栈思维导图](./Vue/vue技术栈思维导图.md)
-- [vue 简单实现](./Vue/vue简单实现.md)
-- [vuex 简单实现](./Vue/vuex简单实现.md)
-- [vue-router 简单实现](./Vue/vue-router简单实现.md)
+- [vue 实现原理分析](./Vue/vue简单实现.md)
+- [vuex 实现原理分析](./Vue/vuex简单实现.md)
+- [vue-router 实现原理分析](./Vue/vue-router简单实现.md)
 
 ## NodeJs
 
@@ -23,7 +24,7 @@
 ## React
 
 - [react 技术栈思维导图](./React/react技术栈思维导图.md)
-- [redux 简单实现](./React/redux简单实现.md)
+- [redux 实现原理分析](./React/redux简单实现.md)
 
 ## Css
 
