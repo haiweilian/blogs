@@ -8,6 +8,8 @@
 - [读书.红宝书之初读笔记系列](./JavaScript/RedBook/README.md)
 - [读书.设计模式与开发实践](./JavaScript/DesignPattern/README.md)
 - [数据结构与算法/题解记录](https://github.com/haiweilian/leetcode-javascript)
+- [原生实现各种手写代码](./JavaScript/原生实现各种手写代码.md)
+- [浏览器相关知识思维导图](./JavaScript/浏览器相关知识思维导图.md)
 
 ## Vue
 

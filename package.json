@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "- [对应的实验](https://github.com/haiweilian/laboratory)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev .",
