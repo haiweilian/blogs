@@ -1,5 +1,5 @@
 ---
-title: vue-router简单实现
+title: vueRouter实现原理分析
 date: 2020-05-10
 updated: 2020-05-10
 categories: Vue
@@ -50,7 +50,7 @@ class VueRouter {
 }
 
 // Vue 插件的实现方式，必须导出一个 install 函数。Vue.use() 的时候自动调用。
-VueRouter.install = function (_Vue) {
+VueRouter.install = function(_Vue) {
   Vue = _Vue;
 
   Vue.mixin({
@@ -61,7 +61,7 @@ VueRouter.install = function (_Vue) {
         Vue.prototype.$router = this.$options.router;
         Vue.prototype.$router.onHashChange();
       }
-    },
+    }
   });
 };
 
@@ -94,24 +94,24 @@ class VueRouter {
 ### 实现 router-link
 
 ```js
-VueRouter.install = function (_Vue) {
+VueRouter.install = function(_Vue) {
   // 注册 router-link 组件，利用 a 标签跳转。
   Vue.component("router-link", {
     props: {
       to: {
         type: String,
-        required: true,
-      },
+        required: true
+      }
     },
     render(h) {
       return h(
         "a",
         {
-          attrs: { href: `#${this.to}` },
+          attrs: { href: `#${this.to}` }
         },
         this.$slots.default
       );
-    },
+    }
   });
 };
 ```
@@ -119,19 +119,19 @@ VueRouter.install = function (_Vue) {
 ### 实现 router-view
 
 ```js
-VueRouter.install = function (_Vue) {
+VueRouter.install = function(_Vue) {
   // 注册 router-view 组件，匹配对应 path 路径的 component 组件。
   Vue.component("router-view", {
     render(h) {
       let component = null;
       const { $options, current } = this.$router;
-      $options.routes.forEach((item) => {
+      $options.routes.forEach(item => {
         if (item.path === current) {
           component = item.component;
         }
       });
       return h(component);
-    },
+    }
   });
 };
 ```

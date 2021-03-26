@@ -1,5 +1,5 @@
 ---
-title: vuex简单实现
+title: vuex实现原理分析
 date: 2020-05-08
 updated: 2020-05-08
 categories: Vue
@@ -26,25 +26,25 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    counter: 0,
+    counter: 0
   },
   getters: {
     doubleCount(state) {
       return state.counter * 2;
-    },
+    }
   },
   mutations: {
     add(state) {
       state.counter++;
-    },
+    }
   },
   actions: {
     add({ commit }) {
       setTimeout(() => {
         commit("add");
       }, 1000);
-    },
-  },
+    }
+  }
 });
 ```
 
@@ -129,7 +129,7 @@ function install(_Vue) {
       if (this.$options.store) {
         Vue.prototype.$store = this.$options.store;
       }
-    },
+    }
   });
 }
 
@@ -147,8 +147,8 @@ class Store {
     this.vm = new Vue({
       data: {
         // $ 和 _ 开头的属性不会被代理，也就是不能通过 vm.xxx 访问。
-        $$state: options.state,
-      },
+        $$state: options.state
+      }
     });
   }
 
@@ -222,13 +222,13 @@ class Store {
       computed[key] = () => value(this.state);
       // 当访问 getters.xxx 的时候，返回对应的计算属性。
       Object.defineProperty(this.getters, key, {
-        get: () => this.vm[key],
+        get: () => this.vm[key]
       });
     });
 
     // 利用 Vue 实现数据响应。
     this.vm = new Vue({
-      computed,
+      computed
     });
   }
 }

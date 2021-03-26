@@ -1,5 +1,5 @@
 ---
-title: redux简单实现
+title: redux实现原理分析
 date: 2020-06-10
 updated: 2020-06-10
 categories: React
@@ -62,7 +62,7 @@ export default class ReduxPage extends Component {
     // 触发更新执行，传递 action
     console.log("1、action---加");
     store.dispatch({
-      type: "ADD",
+      type: "ADD"
     });
   };
 
@@ -70,7 +70,7 @@ export default class ReduxPage extends Component {
     // 触发更新执行, 传递 action
     console.log("1、action---减");
     store.dispatch({
-      type: "MINUS",
+      type: "MINUS"
     });
   };
 
@@ -121,7 +121,7 @@ export default function createStore(reducer) {
   // 提交 action 执行 reducer
   function dispatch(action) {
     currentState = reducer(currentState, action);
-    currentListeners.forEach((listener) => listener());
+    currentListeners.forEach(listener => listener());
     return action;
   }
 
@@ -141,7 +141,7 @@ export default function createStore(reducer) {
   return {
     getState,
     dispatch,
-    subscribe,
+    subscribe
   };
 }
 ```
