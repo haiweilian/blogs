@@ -1,4 +1,4 @@
-# Blog
+## Blog
 
 - [对应的实验](https://github.com/haiweilian/laboratory)
 - [码云的镜像](https://gitee.com/haiweilian/blog)
@@ -28,7 +28,7 @@
 - [react 技术栈思维导图](./React/react技术栈思维导图.md)
 - [redux 实现原理分析](./React/redux实现原理分析.md)
 
-## CssHtml
+## Layout
 
 - [css 命名规则 BEM 思想](./Css/Css命名规则BEM思想.md)
 - [element-ui 的 scss 源码分析](./Css/ElementUI的Scss源码分析.md)
@@ -43,12 +43,9 @@
 - [axios 基础结构型封装](./PlugIn/axios基础结构型封装.md)
 - [axios 全局的请求 Loading](./PlugIn/axios全局的请求Loading.md)
 
-## Server
-
-- [nginx 使用和部署](./Server/nginx使用和部署.md)
-
 ## Other
 
 - [二零二零年度总结](./Other/二零二零年度总结.md)
 - [前端基础工程化体系建设历程](./Other/前端基础工程化体系建设历程.md)
 - [图片打点支持缩放移动的技术要点](./Other/图片打点支持缩放移动的技术要点.md)
+- [写给自己的知识体系和前端进阶路线](./Other/写给自己的知识体系和前端进阶路线.md)
