@@ -7,7 +7,7 @@
 - [算法.数据结构与算法/题解记录](https://github.com/haiweilian/algorithm-javascript)
 - [那些各种手写代码的原生实现](https://github.com/haiweilian/laboratory/tree/master/JavaScript/native-wheel)
 
-## 前端框架
+## 框架开发
 
 - [Vue 技术栈思维导图汇总](./Vue/2020-04-01.md)
 - [Vuex 原理分析，实现响应式的状态管理](./Vue/2020-05-08.md)
@@ -20,13 +20,7 @@
 - [React 技术栈思维导图汇总](./React/2020-06-01.md)
 - [Redux 原理分析，中间件机制“函数合成”](./React/2020-06-10.md)
 
-## 全栈开发
-
-- [NodeJs 技术栈思维导图汇总](./NodeJs/2020-07-22.md)
-- [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/2021-03-29.md)
-- [Nginx 基础命令和部署服务与页面的配置](./Server/2020-01-22.md)
-
-## 构建工程
+## 工程构建
 
 - [前端工程自动化，编码规范、提交规范](./Tools/2020-08-10.md)
 - [GitLab 内部团队协作的使用步骤记录](./Tools/2020-11-15.md)
@@ -34,6 +28,12 @@
 - [Vben Admin 深入理解之路由、菜单、权限的设计](./Tools/2021-08-29.md)
 - [Vben Admin 深入理解之动态主题切换的设计](./Tools/2021-09-05.md)
 - [Vben Admin 深入理解之接口请求、类型声明的设计](./Tools/2021-09-15.md)
+
+## 全栈开发
+
+- [NodeJs 技术栈思维导图汇总](./NodeJs/2020-07-22.md)
+- [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/2021-03-29.md)
+- [Nginx 基础命令和部署服务与页面的配置](./Server/2020-01-22.md)
 
 ## 布局样式
 
