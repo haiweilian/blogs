@@ -5,6 +5,7 @@
 - [读书.《JavaScript 高级程序设计（第 4 版）》系统化的进阶基础](./JavaScript/RedBook/README.md)
 - [读书.《JavaScript 设计模式与开发实践》感受设计模式之美](./JavaScript/DesignPattern/README.md)
 - [算法.数据结构与算法/题解记录](https://github.com/haiweilian/algorithm-javascript)
+- [源码.各种类型的小型库源码随心分析](https://github.com/haiweilian/tinylib-analysis)
 - [那些各种手写代码的原生实现](https://github.com/haiweilian/laboratory/tree/master/JavaScript/native-wheel)
 
 ## 框架开发
