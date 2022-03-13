@@ -6,11 +6,9 @@
 - [读书.《JavaScript 设计模式与开发实践》感受设计模式之美](./JavaScript/DesignPattern/README.md)
 - [算法.数据结构与算法/题解记录](https://github.com/haiweilian/algorithm-javascript)
 - [源码.各种类型的小型库源码随心分析](https://github.com/haiweilian/tinylib-analysis)
-- [那些各种手写代码的原生实现](https://github.com/haiweilian/laboratory/tree/master/JavaScript/native-wheel)
 
 ## 框架开发
 
-- [Vue 技术栈思维导图汇总](./Vue/2020-04-01.md)
 - [Vuex 原理分析，实现响应式的状态管理](./Vue/2020-05-08.md)
 - [Vue Router 原理分析，实现检测路由变化并匹配组件渲染](./Vue/2020-05-10.md)
 - [Vue 原理分析，实现数据响应化和依赖收集](./Vue/2020-05-12.md)
@@ -18,7 +16,6 @@
 - [学完 Vue3、TypeScript 干什么，先来一个"网抑云"](./Vue/2021-07-09.md)
 - [基于 Vue 实现可视化拖拽搭建平台的核心要点](./Vue/2021-07-11.md)
 - [Vue3 体系源码分析、断点调试、思维导图、Mini 版实现](https://github.com/haiweilian/vnext-analysis)
-- [React 技术栈思维导图汇总](./React/2020-06-01.md)
 - [Redux 原理分析，中间件机制“函数合成”](./React/2020-06-10.md)
 
 ## 工程构建
@@ -28,11 +25,9 @@
 - [Vben Admin 深入理解之插件、环境变量的设计](./Tools/2021-08-28.md)
 - [Vben Admin 深入理解之路由、菜单、权限的设计](./Tools/2021-08-29.md)
 - [Vben Admin 深入理解之动态主题切换的设计](./Tools/2021-09-05.md)
-- [Vben Admin 深入理解之接口请求、类型声明的设计](./Tools/2021-09-15.md)
 
 ## 全栈开发
 
-- [NodeJs 技术栈思维导图汇总](./NodeJs/2020-07-22.md)
 - [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/2021-03-29.md)
 - [Nginx 基础命令和部署服务与页面的配置](./Server/2020-01-22.md)
 
@@ -49,6 +44,6 @@
 
 ## 记录总结
 
-- [二零二零年度总结](./Other/2020-12-27.md)
-- [前端基础工程化体系建设历程](./Other/2021-03-18.md)
-- [写给自己的知识体系和前端进阶路线](./Other/2021-03-28.md)
+- [二零二零年度总结](./Summary/2020-12-27.md)
+- [前端基础工程化体系建设历程](./Summary/2021-03-18.md)
+- [写给自己的知识体系和前端进阶路线](./Summary/2021-03-28.md)
