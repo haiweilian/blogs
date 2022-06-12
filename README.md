@@ -25,6 +25,7 @@
 - [Vben Admin 深入理解之插件、环境变量的设计](./Tools/2021-08-28.md)
 - [Vben Admin 深入理解之路由、菜单、权限的设计](./Tools/2021-08-29.md)
 - [Vben Admin 深入理解之动态主题切换的设计](./Tools/2021-09-05.md)
+- [在 VuePress 中实现接近 Dumi Demo 的体验](./Tools/2022-06-12.md)
 
 ## 全栈开发
 
