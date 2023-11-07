@@ -1,27 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Node template
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Dependency directories
-node_modules
-jspm_packages
-
-# IDE / Editor
-.idea
-
-# Service worker
-sw.*
-
-# Mac OSX
 .DS_Store
-
-# Vim swap files
-*.swp
-
-# Build
+.idea
+.vuepress/.temp
+.vuepress/.cache
+*.lock
 dist
+node_modules
