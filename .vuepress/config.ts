@@ -23,11 +23,17 @@ export default defineUserConfig({
         children: [
           {
             text: "分类",
-            children: [{ text: "前端", link: "/categories/qianduan/1/" }],
+            children: [
+              { text: "前端", link: "/categories/qianduan/1/" },
+              { text: "算法", link: "/categories/suanfa/1/" },
+            ],
           },
           {
             text: "系列",
-            children: [{ text: "实践 Vue3 组件库", link: "/blogs/vue/lib/vlib-starter-1" }],
+            children: [
+              { text: "实践 Vue3 组件库", link: "/blogs/vue/lib/vlib-starter-1" },
+              { text: "设计模式与开发实践总结", link: "/blogs/javascript/design-pattern/" },
+            ],
           },
         ],
       },

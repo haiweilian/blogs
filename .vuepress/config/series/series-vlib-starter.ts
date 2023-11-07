@@ -1,4 +1,4 @@
-export const blogsVueLib = {
+export const seriesVlibStarter = {
   "/blogs/vue/lib/": [
     "vlib-starter-1",
     "vlib-starter-2",

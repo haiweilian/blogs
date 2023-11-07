@@ -24,4 +24,8 @@ blog:
     - { icon: "LogoWechat", link: "/wx.png" }
     - { icon: "LogoGitee", link: "https://gitee.com/haiweilian" }
     - { icon: "LogoJuejin", link: "https://juejin.cn/user/360295547023176" }
+footer:
+  record: 京ICP备16015934号
+  recordLink: http://www.beian.miit.gov.cn
+  startYear: 2020
 ---

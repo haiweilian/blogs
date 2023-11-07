@@ -1,5 +1,7 @@
-import { blogsVueLib } from "./blogs-vue-lib";
+import { seriesVlibStarter } from "./series-vlib-starter";
+import { seriesDesignPattern } from "./series-design-pattern";
 
 export const series = {
-  ...blogsVueLib,
+  ...seriesVlibStarter,
+  ...seriesDesignPattern,
 };
