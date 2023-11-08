@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 import { series } from "./config/index";
@@ -6,6 +7,9 @@ export default defineUserConfig({
   title: "HaiWeiLian's Blog",
   description: "HaiWeiLian's Blog",
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  alias: {
+    "@vicons/carbon": resolve(__dirname, "icons"),
+  },
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
@@ -26,13 +30,15 @@ export default defineUserConfig({
             children: [
               { text: "前端", link: "/categories/qianduan/1/" },
               { text: "算法", link: "/categories/suanfa/1/" },
+              { text: "源码分析", link: "/categories/yuanmafenxi/1/" },
             ],
           },
           {
             text: "系列",
             children: [
-              { text: "实践 Vue3 组件库", link: "/blogs/vue/lib/vlib-starter-1" },
-              { text: "设计模式与开发实践总结", link: "/blogs/javascript/design-pattern/" },
+              { text: "实践 Vue3 组件库系列", link: "/blogs/vue/lib/guide" },
+              { text: "分析 Node 小型库源码系列", link: "/blogs/node/tinylib-analysis/guide" },
+              { text: "设计模式与开发实践系列", link: "/blogs/javascript/design-pattern/guide" },
             ],
           },
         ],
@@ -42,18 +48,5 @@ export default defineUserConfig({
       { text: "归档", icon: "Calendar", link: "/timeline" },
       { text: "关于我", icon: "User", link: "/about" },
     ],
-    // commentConfig: {
-    //   type: 'valie',
-    //   // options 与 1.x 的 valineConfig 配置一致
-    //   options: {
-    //     // appId: 'xxx',
-    //     // appKey: 'xxx',
-    //     // placeholder: '填写邮箱可以收到回复提醒哦！',
-    //     // verify: true, // 验证码服务
-    //     // notify: true,
-    //     // recordIP: true,
-    //     // hideComments: true // 隐藏评论
-    //   },
-    // },
   }),
 });

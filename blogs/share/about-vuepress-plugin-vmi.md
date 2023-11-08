@@ -2,7 +2,7 @@
 title: 在 VuePress 中实现接近 Dumi Demo 的体验
 date: 2022-06-12
 categories:
-  - 分享
+  - 技术分享
 ---
 
 ## 前言

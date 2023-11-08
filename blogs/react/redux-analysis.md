@@ -3,8 +3,10 @@ title: Redux 原理分析，中间件机制函数合成
 date: 2020-06-10
 tags:
   - React
+  - Redux
 categories:
   - 前端
+  - 源码分析
 ---
 
 先来看下 redux 数据流。

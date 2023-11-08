@@ -2,7 +2,7 @@
 title: 学完 Vue3、TypeScript 干什么，先来一个"网抑云"
 date: 2021-07-09
 categories:
-  - 分享
+  - 技术分享
 ---
 
 ## 1、前言

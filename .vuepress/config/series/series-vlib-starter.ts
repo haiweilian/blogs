@@ -1,6 +1,6 @@
 export const seriesVlibStarter = {
   "/blogs/vue/lib/": [
-    "vlib-starter-1",
+    "guide",
     "vlib-starter-2",
     "vlib-starter-3",
     "vlib-starter-4",

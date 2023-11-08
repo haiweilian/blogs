@@ -14,16 +14,18 @@ bannerBrand:
     - { text: 网络日志, link: "/posts" }
     - { text: 开源项目, link: "/code", type: "plain" }
   socialLinks:
-    - { icon: "LogoGithub", link: "https://github.com/haiweilian" }
-    - { icon: "LogoWechat", link: "/wx.png" }
-    - { icon: "LogoGitee", link: "https://gitee.com/haiweilian" }
-    - { icon: "LogoJuejin", link: "https://juejin.cn/user/360295547023176" }
+    - { icon: "SimpleIconsGithub", link: "https://github.com/haiweilian" }
+    - { icon: "SimpleIconsGitee", link: "https://gitee.com/haiweilian" }
+    - { icon: "SimpleIconsJuejin", link: "https://juejin.cn/user/360295547023176" }
+    - { icon: "SimpleIconsLeetcode", link: "https://leetcode.cn/u/haiweilian" }
+    - { icon: "SimpleIconsWechat", link: "/wx.png" }
 blog:
   socialLinks:
-    - { icon: "LogoGithub", link: "https://github.com/haiweilian" }
-    - { icon: "LogoWechat", link: "/wx.png" }
-    - { icon: "LogoGitee", link: "https://gitee.com/haiweilian" }
-    - { icon: "LogoJuejin", link: "https://juejin.cn/user/360295547023176" }
+    - { icon: "SimpleIconsGithub", link: "https://github.com/haiweilian" }
+    - { icon: "SimpleIconsGitee", link: "https://gitee.com/haiweilian" }
+    - { icon: "SimpleIconsJuejin", link: "https://juejin.cn/user/360295547023176" }
+    - { icon: "SimpleIconsLeetcode", link: "https://leetcode.cn/u/haiweilian" }
+    - { icon: "SimpleIconsWechat", link: "/wx.png" }
 footer:
   record: 京ICP备16015934号
   recordLink: http://www.beian.miit.gov.cn

@@ -1,5 +1,5 @@
 ---
-title: 实践 Vue3 组件库-介绍一下这个系列
+title: 实践 Vue3 组件库系列
 date: 2022-08-10
 tags:
   - Vue

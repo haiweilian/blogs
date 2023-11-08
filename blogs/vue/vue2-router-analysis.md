@@ -3,8 +3,10 @@ title: Vue Router 原理分析，实现检测路由变化并匹配组件渲染
 date: 2020-05-10
 tags:
   - Vue
+  - VueRouter
 categories:
   - 前端
+  - 源码分析
 ---
 
 简单实现，实现最基础的功能。

@@ -1,0 +1,12 @@
+// 时间线年份倒序排列
+.timeline-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+// 主题推荐底部隐藏
+.footer-wrapper {
+  > span:nth-child(1) {
+    display: none;
+  }
+}
