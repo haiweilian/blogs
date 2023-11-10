@@ -9,7 +9,7 @@ categories:
 
 ## 前言
 
-此次看红宝书的主要重点是测试练习和知识补充，但有些概念和理解也用文字描述了下来，所以代码占比多。[测试源码地址](https://github.com/haiweilian/laboratory/tree/master/JavaScript/red-book)
+此次看红宝书的主要重点是测试练习和知识补充，但有些概念和理解也用文字描述了下来，所以代码占比多。[测试源码地址](https://github.com/haiweilian/demos/tree/master/JavaScript/red-book)
 
 - 记录了哪些内容：有不熟悉的、有不知道的、还有纯粹补充章节内容的。
 - 红宝书的内容远不止这些 **(建议看全书)**，阅读顺序和阅读内容参考了 [参考阅读建议](https://juejin.cn/post/6895304726822027277) 。

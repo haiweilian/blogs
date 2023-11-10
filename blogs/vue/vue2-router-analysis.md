@@ -13,7 +13,7 @@ categories:
 
 ## 查看示例
 
-[查看示例](https://github.com/haiweilian/laboratory/tree/master/Vue/vue-router-simple-imp)
+[查看示例](https://github.com/haiweilian/demos/tree/master/Vue/vue-router-simple-imp)
 
 ## 初始化项目
 

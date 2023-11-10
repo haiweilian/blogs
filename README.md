@@ -12,7 +12,7 @@ bannerBrand:
   tagline: 将有一天你会拥有美好的生活，感谢在那每一次跌倒了以后，又重新来过。
   buttons:
     - { text: 网络日志, link: "/posts" }
-    - { text: 开源项目, link: "/code", type: "plain" }
+    - { text: 开源项目, link: "/code.html", type: "plain" }
   socialLinks:
     - { icon: "SimpleIconsGithub", link: "https://github.com/haiweilian" }
     - { icon: "SimpleIconsGitee", link: "https://gitee.com/haiweilian" }

@@ -15,7 +15,7 @@ categories:
 
 ## 查看示例
 
-[查看示例](https://github.com/haiweilian/laboratory/tree/master/React/redux-simple-imp)
+[查看示例](https://github.com/haiweilian/demos/tree/master/React/redux-simple-imp)
 
 ## 初始化项目
 
