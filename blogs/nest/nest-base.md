@@ -266,7 +266,7 @@ export class AppController {
   @UseFilters(RouteFilter)
   getHello(
     @Query("id", new RouteParamPipe(1)) id,
-    @Query("name", new RouteParamPipe(2)) name // 在调用 @Query() 之后从全局运行
+    @Query("name", new RouteParamPipe(2)) name
   ): string {
     console.log("AppController.getHello: 调用控制器");
 
@@ -1062,6 +1062,4 @@ export class CustomProvidersModule {}
 
 ## 项目推荐
 
-我开源了一个 [基于 Nest.js & React.js 的后台权限管理系统](https://github.com/haiweilian/vivy-nest-admin)。
-
-此项目实践 Nest.js 开发，此专栏记录 Nest.js 知识，感兴趣一键三连。
+我开源了一个 [基于 Nest.js & React.js 的后台权限管理系统](https://github.com/haiweilian/vivy-nest-admin)，此项目实践 Nest.js 开发。

@@ -73,7 +73,7 @@ export class AppController {
   @UseFilters(RouteFilter)
   getHello(
     @Query("id", new RouteParamPipe(1)) id,
-    @Query("name", new RouteParamPipe(2)) name // 在调用 @Query() 之后从全局运行
+    @Query("name", new RouteParamPipe(2)) name
   ): string {
     console.log("AppController.getHello: 调用控制器");
 
