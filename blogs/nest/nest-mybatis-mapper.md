@@ -1,6 +1,6 @@
 ---
 title: 在 Nest.js 中编写 SQL 的另一种方式(MyBatisMapper)
-date: 2023-12-21
+date: 2024-01-26
 tags:
   - Nest
 categories:
