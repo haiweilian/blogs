@@ -1,4 +1,5 @@
 import { code } from "./code.js";
+import Knowcess from "../../lib/knowcess/knowcess.js";
 const html = Prism.highlight(code, Prism.languages.javascript, "javascript");
 
 const knowcess = new Knowcess({

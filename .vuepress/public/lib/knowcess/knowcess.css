@@ -1,0 +1,169 @@
+.knowcess {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.knowcess-source {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #2d2d2d;
+}
+
+.knowcess-source .knowcess-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-top: 10px; /* same .knowcess-code padding-top */
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  line-height: 1.5; /* same .knowcess-code line-height */
+  font-size: 1em; /* same .knowcess-code font-size */
+  opacity: 0;
+}
+
+.knowcess-source .knowcess-line::before {
+  font-size: 1em;
+  content: '33';
+  color: transparent;
+}
+
+.knowcess-source .knowcess-code {
+  padding: 10px;
+  position: relative;
+}
+
+.knowcess-source .knowcess-code pre[class*='language-'] {
+  margin: 0px;
+  padding: 0px;
+}
+
+.knowcess-interactive {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1;
+}
+
+.knowcess-stacks {
+  display: flex;
+  flex-direction: column;
+}
+
+.knowcess-stacks .knowcess-stacks-item {
+  display: flex;
+  border-bottom: 1px solid #fff;
+}
+
+.knowcess-stacks .knowcess-stacks-label {
+  box-sizing: border-box;
+  width: 6rem;
+  height: 35px;
+  line-height: 35px;
+  padding: 0px 5px;
+  background: #ddd;
+}
+
+.knowcess-stacks .knowcess-stacks-value {
+  box-sizing: border-box;
+  flex: 1;
+  height: 35px;
+  line-height: 35px;
+  padding: 0px 5px;
+  background: #f1f1f1;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.knowcess-stacks .knowcess-stacks-value span {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: 26px;
+  line-height: 26px;
+  background: #ddd;
+  padding: 0px 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.knowcess-action {
+  display: flex;
+  justify-content: space-between;
+  background: #ddd;
+  padding: 5px;
+}
+
+.knowcess-action span {
+  cursor: pointer;
+}
+
+.knowcess-action span svg {
+  vertical-align: middle;
+}
+
+.knowcess-action .knowcess-action-play {
+  display: block;
+}
+
+.knowcess-action .knowcess-action-pause {
+  display: none;
+}
+
+.knowcess-commentary {
+  width: 80%;
+  background: rgba(0, 0, 0, 0.77);
+  border-radius: 7px;
+  padding: 1em;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.5rem;
+  transform: translate(-50%, -50%);
+  line-height: 1.5;
+  opacity: 0;
+}
+
+/* horizontal layout */
+.knowcess-horizontal {
+  flex-direction: row;
+}
+
+.knowcess-horizontal .knowcess-source {
+  flex: 2;
+}
+
+.knowcess-horizontal .knowcess-interactive {
+  flex: 1;
+  overflow: hidden;
+}
+
+.knowcess-horizontal .knowcess-stacks {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.knowcess-horizontal .knowcess-stacks .knowcess-stacks-item {
+  flex-direction: column;
+}
+
+.knowcess-horizontal .knowcess-stacks .knowcess-stacks-label {
+  width: 100%;
+}
+
+.knowcess-horizontal .knowcess-stacks .knowcess-stacks-value {
+  display: flex;
+  flex-direction: column-reverse;
+  max-height: calc(90vh - 35px - 42px);
+  overflow-y: auto;
+}
+
+.knowcess-horizontal .knowcess-stacks .knowcess-stacks-value span {
+  display: block;
+  margin: 5px 0px;
+}

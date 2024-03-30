@@ -23,4 +23,16 @@ export default [
     link: "https://github.com/pansyjs/watermark/pulls?q=author%3Ahaiweilian",
     desc: "🛡 强大的水印组件，助你快速的给网页添加水印。",
   },
+  {
+    name: "vite-plugin-mock",
+    repo: "vbenjs/vite-plugin-mock",
+    link: "https://github.com/vbenjs/vite-plugin-mock/pulls?q=author%3Ahaiweilian",
+    desc: "A mock plugin for vite.use mockjs.",
+  },
+  {
+    name: "ant-design-vue",
+    repo: "vueComponent/ant-design-vue",
+    link: "https://github.com/vueComponent/ant-design-vue/pulls?q=author%3Ahaiweilian",
+    desc: "🌈 An enterprise-class UI components based on Ant Design and Vue. 🐜",
+  },
 ];
