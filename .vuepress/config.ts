@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import recoTheme from "vuepress-theme-reco";
 import { series } from "./config/index";
 
@@ -11,6 +12,7 @@ export default defineUserConfig({
   alias: {
     "@vicons/carbon": resolve(__dirname, "icons"),
   },
+  bundler: viteBundler({}),
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",

@@ -9,7 +9,7 @@ export default [
     name: "vnext-analysis",
     repo: "haiweilian/vnext-analysis",
     link: "https://github.com/haiweilian/vnext-analysis",
-    desc: "🚀 Vue3 体系源码分析、流程标记、思维导图、Mini 版实现。",
+    desc: "Vue3 体系源码分析、流程标记、思维导图、Mini 版实现。",
   },
   {
     name: "taggd-manager",
@@ -21,6 +21,12 @@ export default [
     name: "vivy-nest-admin",
     repo: "haiweilian/vivy-nest-admin",
     link: "https://github.com/haiweilian/vivy-nest-admin",
-    desc: "基于 Nest.js & React.js 的后台权限管理系统，整体架构良好易扩展。",
+    desc: "基于 Nest.js & React.js & TypeORM 的后台权限管理系统。",
+  },
+  {
+    name: "electron-smallest-updater",
+    repo: "haiweilian/electron-smallest-updater",
+    link: "https://github.com/haiweilian/electron-smallest-updater",
+    desc: "Electron Resources 按需最小更新、自动构建发布包及信息。",
   },
 ];
