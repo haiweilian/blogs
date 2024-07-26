@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import data from "../data/open-source-code";
+import data from "../config/data/open-source-code";
 
 defineProps<{
   type: string;

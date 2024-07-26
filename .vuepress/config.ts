@@ -2,7 +2,6 @@ import { resolve } from "path";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import recoTheme from "vuepress-theme-reco";
-import { series } from "./config/index";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -22,7 +21,6 @@ export default defineUserConfig({
     docsBranch: "master",
     editLinkText: "编辑此页面",
     lastUpdatedText: "最后更新时间",
-    series,
     navbar: [
       { text: "首页", icon: "Home", link: "/" },
       {
@@ -32,22 +30,14 @@ export default defineUserConfig({
           {
             text: "分类",
             children: [
-              { text: "前端", link: "/categories/qianduan/1/" },
-              { text: "算法", link: "/categories/suanfa/1/" },
-              { text: "源码分析", link: "/categories/yuanmafenxi/1/" },
-            ],
-          },
-          {
-            text: "系列",
-            children: [
-              { text: "实践 Vue3 组件库系列", link: "/blogs/vue/lib/guide" },
-              { text: "分析 Node 小型库源码系列", link: "/blogs/node/tinylib-analysis/guide" },
-              { text: "设计模式与开发实践系列", link: "/blogs/javascript/design-pattern/guide" },
+              { text: "前端", link: "/categories/qianduan/1" },
+              { text: "后端", link: "/categories/houduan/1" },
+              { text: "源码分析", link: "/categories/yuanmafenxi/1" },
             ],
           },
         ],
       },
-      { text: "标签", icon: "Tag", link: "/tags/JavaScript/1/" },
+      { text: "标签", icon: "Tag", link: "/tags/JavaScript/1" },
       { text: "项目", icon: "Code", link: "/code" },
       { text: "归档", icon: "Calendar", link: "/timeline" },
       { text: "留言板", icon: "Chat", link: "/message" },
